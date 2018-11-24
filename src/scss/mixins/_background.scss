@@ -1,0 +1,7 @@
+//BG variants
+
+@mixin bg-variant($parent, $color) {
+    #{$parent} {
+      background-color: $color !important;
+    }
+  }

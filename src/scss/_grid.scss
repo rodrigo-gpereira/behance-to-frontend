@@ -1,0 +1,54 @@
+/*
+* Grid System
+*/
+
+$breakpoints: (
+  sm : 576px,
+  md: 768px,
+  lg : 992px,
+  xl : 1200px
+);
+
+@mixin mq($mq-breakpoint, $mq-breakpoints: $breakpoints) {
+    // If $mq-breakpoint is a key that exists in
+    // $mq-breakpoints, get and use the value
+    @if map-has-key($mq-breakpoints, $mq-breakpoint) {
+      $mq-breakpoint: map-get($mq-breakpoints, $mq-breakpoint);
+    }
+    
+    @media screen and (min-width: #{$mq-breakpoint}) {
+      @content;
+    }
+  }
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px
+);
+
+.container{
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@include mq(sm) {
+    .container{
+        width: map-get($container-max-widths, sm);
+    }
+}
+@include mq(md) {
+    .container{
+        width: map-get($container-max-widths, md);
+    }
+}
+@include mq(lg) {
+    .container{
+        width: map-get($container-max-widths, lg);
+    }
+}@include mq(xl) {
+    .container{
+        width: map-get($container-max-widths, xl);
+    }
+}

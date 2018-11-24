@@ -58,7 +58,7 @@ gulp.task('useref', function () {
 
 //Otimização de Imagens
 gulp.task('images', function () {
-    return gulp.src('images/**/*.+(png|jpg|gif|svg)')
+    return gulp.src('src/images/**/*.+(png|jpg|gif|svg)')
         // .pipe(cache - Realiza o cache das imagens
         .pipe(cache(imagemin({
             // imagens entrelaçadas

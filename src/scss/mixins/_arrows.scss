@@ -1,0 +1,39 @@
+@mixin arrow-y($direction, $width, $color){
+    display: block;
+    position: absolute;
+    content:'';
+    width: 0; 
+    height: 0;
+    z-index: 1; 
+    @if $direction == "up" or "down"{
+        border-left: $width solid transparent;
+        border-right: $width solid transparent;
+        @if $direction == "up"{
+            border-bottom: $width solid $color;
+            border-top: $width solid transparent;
+        } @else if $direction == "down"{
+            border-top: $width solid $color;
+            border-bottom: $width solid transparent;
+        }
+    } 
+}
+
+@mixin arrow-x ($direction, $width, $color){
+    display: block;
+    position: absolute;
+    content:'';
+    width: 0; 
+    height: 0;
+    z-index: 1; 
+    @if $direction == "left" or "right"{
+        border-top: $width solid transparent;
+        border-bottom: $width solid transparent;
+        @if $direction == "right"{
+            border-left: $width solid $color;
+            border-right: $width solid transparent;
+        } @else if $direction == "left"{
+            border-right: $width solid $color;
+            border-left: $width solid transparent;
+        }
+    } 
+}

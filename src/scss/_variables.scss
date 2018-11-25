@@ -7,7 +7,9 @@ $black:     #000 !default;
 
 $primary:   #dbbe20;
 $secondary: #fbfaf8;
-$gray:      #262626;
+$gray:      #555;
+$gray-light:#999;
+$gray-dark: #262626;
 
 $theme-colors: () !default;
 
@@ -24,6 +26,7 @@ $theme-colors: map-merge(
 //Fonts
 //
 
-$font-family-ss:  'Noto Sans SC', sans-serif;
-$font-family-cv:    'Sacramento', cursive;
+$font-family-ss:  'Dosis', sans-serif;
+$font-family-cv:  'Sacramento', cursive;
 $font-base:       $font-family-ss;
+$flaticon-base-url: "../assets/flaticon/font/";

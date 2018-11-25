@@ -56,6 +56,12 @@ gulp.task('useref', function () {
         .pipe(gulp.dest('dist'))
 })
 
+//Copiar arquivos de assets
+gulp.task('assets', function () {
+    return gulp.src('src/assets/**/*')
+        .pipe(gulp.dest('dist/assets'))
+})
+
 //Otimização de Imagens
 gulp.task('images', function () {
     return gulp.src('src/images/**/*.+(png|jpg|gif|svg)')
@@ -89,7 +95,7 @@ gulp.task('build:clean', function () {
 //Executar o Build
 gulp.task('build', function (callback) {
     runSequence('build:clean',
-        ['sass', 'useref', 'images'],
+        ['sass', 'useref', 'images', 'assets'],
         callback
     )
 })

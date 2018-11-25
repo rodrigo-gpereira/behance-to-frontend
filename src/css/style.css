@@ -1,7 +1,67 @@
 /*!  
  * Behance to Frontend Projetc
  */
-@import url("https://fonts.googleapis.com/css?family=Noto+Sans+SC|Sacramento");
+@import url("https://fonts.googleapis.com/css?family=Dosis:400,700|Sacramento");
+/*
+    Flaticon icon font: Flaticon
+    Creation date: 25/11/2018 02:06
+    */
+@font-face {
+  font-family: "Flaticon";
+  src: url("../assets/flaticon/font/Flaticon.eot");
+  src: url("../assets/flaticon/font/Flaticon.eot?#iefix") format("embedded-opentype"), url("../assets/flaticon/font/Flaticon.woff") format("woff"), url("../assets/flaticon/font/Flaticon.ttf") format("truetype"), url("../assets/flaticon/font/Flaticon.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  @font-face {
+    font-family: "Flaticon";
+    src: url("../assets/flaticon/font/./Flaticon.svg#Flaticon") format("svg"); } }
+
+.fi:before {
+  display: inline-block;
+  font-family: "Flaticon";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased; }
+
+.flaticon-facebook:before {
+  content: "\f100"; }
+
+.flaticon-linkedin:before {
+  content: "\f101"; }
+
+.flaticon-pinterest:before {
+  content: "\f102"; }
+
+.flaticon-menu:before {
+  content: "\f103"; }
+
+.flaticon-pizza:before {
+  content: "\f104"; }
+
+.flaticon-arrow-right:before {
+  content: "\f105"; }
+
+.flaticon-thumbs-up:before {
+  content: "\f106"; }
+
+.flaticon-star:before {
+  content: "\f107"; }
+
+.flaticon-arrow-left:before {
+  content: "\f108"; }
+
+.flaticon-search:before {
+  content: "\f109"; }
+
 /*! minireset.css v0.0.3 | MIT License | github.com/jgthms/minireset.css */
 html,
 body,
@@ -96,91 +156,6 @@ th {
 @media screen and (min-width: 1200px) {
   .container {
     width: 1140px; } }
-
-.bg-primary {
-  background-color: #dbbe20 !important; }
-
-.bg-secondary {
-  background-color: #fbfaf8 !important; }
-
-.bg-gray {
-  background-color: #262626 !important; }
-
-.bg-white {
-  background-color: #fff !important; }
-
-.color-primary {
-  color: #dbbe20 !important; }
-
-.color-secondary {
-  color: #fbfaf8 !important; }
-
-.color-gray {
-  color: #262626 !important; }
-
-.color-white {
-  color: #fff !important; }
-
-body {
-  font-family: "Noto Sans SC", sans-serif;
-  background-color: white;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 180px auto 200px; }
-
-header {
-  background-color: whitesmoke; }
-
-main {
-  background-color: #dbbe20; }
-
-footer {
-  background-color: darkslategray; }
-
-.grid-photo {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: repeat(6, 120px);
-  grid-template-areas: "main-photo main-photo" "main-photo main-photo" ". ." ". ." ". ." "side-photo side-photo"; }
-  @media screen and (min-width: 576px) {
-    .grid-photo {
-      grid-template-columns: repeat(4, 1fr);
-      grid-template-rows: repeat(3, 120px);
-      grid-template-areas: "main-photo main-photo main-photo side-photo " "main-photo main-photo main-photo . " ". . . ."; } }
-  @media screen and (min-width: 768px) {
-    .grid-photo {
-      grid-template-columns: repeat(2, 1fr) repeat(2, 20%) 14%;
-      grid-template-rows: repeat(2, 180px);
-      grid-template-areas: "main-photo main-photo . . side-photo" "main-photo main-photo . . side-photo"; } }
-  .grid-photo > .grid-item {
-    display: flex;
-    position: relative;
-    flex-direction: column;
-    justify-content: center;
-    padding: 36px; }
-
-.main-photo {
-  position: relative;
-  grid-area: main-photo;
-  background-image: url("../images/pizza/fancycrave-458022-unsplash.jpg");
-  background-position: center;
-  background-size: cover; }
-
-.box-photo {
-  position: relative;
-  background-image: url("../images/pizza/pizza2.jpg");
-  background-position: center;
-  background-size: cover;
-  background-color: #666;
-  background-blend-mode: multiply; }
-
-.side-photo {
-  grid-area: side-photo;
-  background-image: url("../images/pizza/pizzaheart.jpg");
-  background-position: center;
-  background-size: cover;
-  background-color: #666;
-  background-blend-mode: multiply; }
 
 .box-1 {
   grid-column: span 2; }
@@ -277,5 +252,196 @@ footer {
         right: -14px;
         top: auto;
         bottom: auto; } }
+
+.bg-primary {
+  background-color: #dbbe20 !important; }
+
+.bg-secondary {
+  background-color: #fbfaf8 !important; }
+
+.bg-gray {
+  background-color: #555 !important; }
+
+.bg-white {
+  background-color: #fff !important; }
+
+.color-primary {
+  color: #dbbe20 !important; }
+
+.color-secondary {
+  color: #fbfaf8 !important; }
+
+.color-gray {
+  color: #555 !important; }
+
+.color-white {
+  color: #fff !important; }
+
+body {
+  font-family: "Dosis", sans-serif;
+  font-size: 1.2em;
+  background-color: #fbfaf8;
+  color: #000;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr auto auto 200px;
+  grid-template-areas: "header" "slider" "main" "footer"; }
+
+header {
+  background-color: #fff; }
+
+.header {
+  display: flex;
+  height: 100px;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 15px;
+  padding-right: 15px; }
+
+.menu {
+  height: 100%; }
+
+.nav-menu {
+  height: inherit;
+  display: none; }
+  @media screen and (min-width: 992px) {
+    .nav-menu {
+      display: flex; } }
+  .nav-menu > .itens {
+    transition: background-color 0.5s ease;
+    color: #555;
+    padding-left: 15px;
+    padding-right: 15px;
+    line-height: 100px; }
+  .nav-menu > .itens.active {
+    color: #000;
+    border-bottom: 3px solid #dbbe20; }
+  .nav-menu > .itens:hover {
+    background-color: #dbbe20;
+    color: #fff;
+    border-bottom: 3px solid #555; }
+
+.social-menu {
+  height: inherit;
+  display: flex; }
+  .social-menu > .item > .item-link {
+    transition: background-color 0.5s ease;
+    color: #999;
+    padding-left: 15px;
+    padding-right: 15px;
+    line-height: 100px; }
+  .social-menu > .item > .item-link:hover {
+    color: #dbbe20; }
+
+.search {
+  color: #999; }
+
+.brand {
+  font-family: "Sacramento", cursive;
+  font-size: 2.4rem; }
+
+.slider {
+  background-color: #fbfaf8; }
+
+.slider-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px; }
+  @media screen and (min-width: 768px) {
+    .slider-body {
+      flex-direction: row; } }
+  @media screen and (min-width: 992px) {
+    .slider-body {
+      padding: 50px 80px; } }
+  .slider-body > .image {
+    flex-basis: 40%;
+    display: none;
+    margin: 20px;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 0px 0px 8px rgba(221, 221, 221, 0.61); }
+    @media screen and (min-width: 768px) {
+      .slider-body > .image {
+        display: block; } }
+  .slider-body > .content {
+    flex-basis: 50%; }
+
+.title {
+  font-family: "Sacramento", cursive;
+  font-size: 3rem; }
+
+.description {
+  padding-bottom: 30px;
+  color: #999; }
+
+.btn {
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  overflow: visible;
+  background: transparent;
+  cursor: pointer; }
+
+.btn-primary {
+  transition: background-color 0.2s ease;
+  background-color: #dbbe20;
+  padding: 12px 20px;
+  color: white; }
+  .btn-primary:hover {
+    background-color: #827113; }
+
+footer {
+  background-color: #262626; }
+
+.grid-photo {
+  display: grid;
+  background-color: #fff;
+  padding: 15px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(6, 120px);
+  grid-template-areas: "main-photo main-photo" "main-photo main-photo" ". ." ". ." ". ." "side-photo side-photo"; }
+  @media screen and (min-width: 576px) {
+    .grid-photo {
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(3, 120px);
+      grid-template-areas: "main-photo main-photo main-photo side-photo " "main-photo main-photo main-photo . " ". . . ."; } }
+  @media screen and (min-width: 768px) {
+    .grid-photo {
+      grid-template-columns: repeat(2, 1fr) repeat(2, 20%) 14%;
+      grid-template-rows: repeat(2, 180px);
+      grid-template-areas: "main-photo main-photo . . side-photo" "main-photo main-photo . . side-photo"; } }
+  .grid-photo > .grid-item {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    padding: 36px; }
+
+.main-photo {
+  position: relative;
+  grid-area: main-photo;
+  background-image: url("../images/pizza/fancycrave-458022-unsplash.jpg");
+  background-position: center;
+  background-size: cover; }
+
+.box-photo {
+  position: relative;
+  background-image: url("../images/pizza/pizza2.jpg");
+  background-position: center;
+  background-size: cover;
+  background-color: #666;
+  background-blend-mode: multiply; }
+
+.side-photo {
+  grid-area: side-photo;
+  background-image: url("../images/pizza/pizzaheart.jpg");
+  background-position: center;
+  background-size: cover;
+  background-color: #666;
+  background-blend-mode: multiply; }
 
 /*# sourceMappingURL=style.css.map */

@@ -3,37 +3,185 @@
  */
 
 @import 'mixins';
-@import 'placeholders';
-@import 'fonts';
 @import 'variables';
+@import 'fonts';
 @import 'reset';
 @import 'grid';
+@import 'box';
 @import 'utilities';
 
 body {
     font-family: $font-base;
-    background-color: white;
+    font-size: 1.2em;
+    background-color: $secondary;
+    color: $black;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 180px auto 200px
+    grid-template-rows: 1fr auto auto 200px;
+    grid-template-areas:
+        "header"
+        "slider"
+        "main"
+        "footer"
+    ;
 }
 
 header {
-    background-color: whitesmoke;
+    background-color: $white;
 }
 
-main {
+.header {
+    display: flex;
+    height: 100px;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.menu {
+    height: 100%;
+}
+
+.nav-menu {
+    height: inherit;
+    display: none;
+
+    @include mq (lg) {
+        display: flex;
+    }
+
+    >.itens {
+        transition: background-color 0.5s ease;
+        color: $gray;
+        padding-left: 15px;
+        padding-right: 15px;
+        line-height: 100px;
+    }
+
+    >.itens.active {
+        color: $black;
+        border-bottom: 3px solid $primary;
+    }
+
+    >.itens {
+        &:hover {
+            background-color: $primary;
+            color: $white;
+            border-bottom: 3px solid $gray;
+        }
+    }
+}
+
+.social-menu {
+    height: inherit;
+    display: flex;
+
+    >.item>.item-link {
+        transition: background-color 0.5s ease;
+        color: $gray-light;
+        padding-left: 15px;
+        padding-right: 15px;
+        line-height: 100px;
+    }
+
+    >.item>.item-link {
+        &:hover {
+            color: $primary;
+        }
+    }
+}
+
+.search {
+    color: $gray-light;
+}
+
+.brand {
+    font-family: $font-family-cv;
+    font-size: 2.4rem;
+}
+
+.slider {
+    background-color: $secondary;
+}
+
+.slider-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+
+    @include mq (md) {
+        flex-direction: row;
+    }
+    @include mq (lg){
+    padding: 50px 80px;
+    }
+
+    >.image {
+        flex-basis: 40%;
+        display: none;
+
+        @include mq (md) {
+            display: block;
+        }
+
+        margin: 20px;
+        padding: 40px;
+        background-color: $white;
+        border-radius: 50%;
+        box-shadow: 0px 0px 8px rgba(221, 221, 221, 0.61);
+    }
+
+    >.image-dish {}
+
+    >.content {
+        flex-basis: 50%;
+    }
+
+}
+
+.title {
+    font-family: $font-family-cv;
+    font-size: 3rem;
+}
+
+.description {
+    padding-bottom: 30px;
+    color: $gray-light;
+}
+
+.btn {
+    border: none;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    overflow: visible;
+    background: transparent;
+    cursor: pointer;
+}
+
+.btn-primary{
+    transition: background-color 0.2s ease;
     background-color: $primary;
+    padding:12px 20px;
+    color:white;
+    &:hover{
+        background-color: darken($primary, 20%);
+    }
 }
 
 footer {
-    background-color: darkslategray;
+    background-color: $gray-dark;
 }
 
 
 
 .grid-photo {
     display: grid;
+    background-color: $white;
+    padding: 15px;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(6, 120px);
     grid-template-areas:
@@ -100,56 +248,4 @@ footer {
     background-size: cover;
     background-color: #666;
     background-blend-mode: multiply;
-}
-
-.box-1 {
-    grid-column: span 2;
-    &::before {
-        @include arrow-y("up", 7px, $primary);
-        top:-14px;
-        align-self: center;
-    }
-    @include mq (md){ 
-        grid-column: span 1;
-        grid-row: 2;
-        &::before {
-        @include arrow-x("left", 7px, $primary);
-        top:auto;
-        left:-14px
-        }
-    }
-}
-
-.box-2 {
-    &::before {
-        @include arrow-x("right", 7px, $white);
-        right:-14px;
-    }
-}
-
-.box-4{
-    grid-column: span 2;
-    &::before {
-        @include arrow-y("down", 7px, $secondary);
-        bottom:-14px;
-        align-self: center;
-    }
-    @include mq (sm){
-        grid-row: 2;
-        grid-column: 4 / span 1;
-        &::before {
-            @include arrow-y("up", 7px, $secondary);
-            top:-14px;
-        }
-    }
-    @include mq (md){
-        grid-row: 2;
-        grid-column: 4 / span 1;
-        &::before {
-            @include arrow-x("right", 7px, $secondary);
-            right:-14px;
-            top:auto;
-            bottom: auto;
-        }
-    }
 }

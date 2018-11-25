@@ -1,0 +1,88 @@
+    /*
+    Flaticon icon font: Flaticon
+    Creation date: 25/11/2018 02:06
+    */
+
+    @font-face {
+      font-family: "Flaticon";
+      src: url("#{$flaticon-base-url}Flaticon.eot");
+      src: url("#{$flaticon-base-url}Flaticon.eot?#iefix") format("embedded-opentype"),
+      url("#{$flaticon-base-url}Flaticon.woff") format("woff"),
+      url("#{$flaticon-base-url}Flaticon.ttf") format("truetype"),
+      url("#{$flaticon-base-url}Flaticon.svg#Flaticon") format("svg");
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    @media screen and (-webkit-min-device-pixel-ratio:0) {
+      @font-face {
+        font-family: "Flaticon";
+        src: url("#{$flaticon-base-url}./Flaticon.svg#Flaticon") format("svg");
+      }
+    }
+
+    .fi:before {
+      display: inline-block;
+      font-family: "Flaticon";
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      line-height: 1;
+      text-decoration: inherit;
+      text-rendering: optimizeLegibility;
+      text-transform: none;
+      -moz-osx-font-smoothing: grayscale;
+      -webkit-font-smoothing: antialiased;
+      font-smoothing: antialiased;
+    }
+
+    .flaticon-facebook:before {
+      content: "\f100";
+    }
+
+    .flaticon-linkedin:before {
+      content: "\f101";
+    }
+
+    .flaticon-pinterest:before {
+      content: "\f102";
+    }
+
+    .flaticon-menu:before {
+      content: "\f103";
+    }
+
+    .flaticon-pizza:before {
+      content: "\f104";
+    }
+
+    .flaticon-arrow-right:before {
+      content: "\f105";
+    }
+
+    .flaticon-thumbs-up:before {
+      content: "\f106";
+    }
+
+    .flaticon-star:before {
+      content: "\f107";
+    }
+
+    .flaticon-arrow-left:before {
+      content: "\f108";
+    }
+
+    .flaticon-search:before {
+      content: "\f109";
+    }
+
+    $font-Flaticon-facebook: "\f100";
+    $font-Flaticon-linkedin: "\f101";
+    $font-Flaticon-pinterest: "\f102";
+    $font-Flaticon-menu: "\f103";
+    $font-Flaticon-pizza: "\f104";
+    $font-Flaticon-arrow-right: "\f105";
+    $font-Flaticon-thumbs-up: "\f106";
+    $font-Flaticon-star: "\f107";
+    $font-Flaticon-arrow-left: "\f108";
+    $font-Flaticon-search: "\f109";

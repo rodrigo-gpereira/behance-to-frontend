@@ -1,0 +1,51 @@
+.box-1 {
+    grid-column: span 2;
+    &::before {
+        @include arrow-y("up", 7px, $primary);
+        top:-14px;
+        align-self: center;
+    }
+    @include mq (md){ 
+        grid-column: span 1;
+        grid-row: 2;
+        &::before {
+        @include arrow-x("left", 7px, $primary);
+        top:auto;
+        left:-14px
+        }
+    }
+}
+
+.box-2 {
+    &::before {
+        @include arrow-x("right", 7px, $white);
+        right:-14px;
+    }
+}
+
+.box-4{
+    grid-column: span 2;
+    &::before {
+        @include arrow-y("down", 7px, $secondary);
+        bottom:-14px;
+        align-self: center;
+    }
+    @include mq (sm){
+        grid-row: 2;
+        grid-column: 4 / span 1;
+        &::before {
+            @include arrow-y("up", 7px, $secondary);
+            top:-14px;
+        }
+    }
+    @include mq (md){
+        grid-row: 2;
+        grid-column: 4 / span 1;
+        &::before {
+            @include arrow-x("right", 7px, $secondary);
+            right:-14px;
+            top:auto;
+            bottom: auto;
+        }
+    }
+}

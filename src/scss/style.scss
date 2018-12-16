@@ -51,20 +51,23 @@ header {
         display: flex;
     }
 
-    >.itens {
+    >.itens>.item-link {
+        display: block;
+        line-height: 100px;
+        height: 100%;
+        text-decoration: none;
         transition: background-color 0.5s ease;
         color: $gray;
         padding-left: 15px;
         padding-right: 15px;
-        line-height: 100px;
     }
 
-    >.itens.active {
+    >.itens.active>.item-link {
         color: $black;
         border-bottom: 3px solid $primary;
     }
 
-    >.itens {
+    >.itens>.item-link {
         &:hover {
             background-color: $primary;
             color: $white;

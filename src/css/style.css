@@ -307,16 +307,19 @@ header {
   @media screen and (min-width: 992px) {
     .nav-menu {
       display: flex; } }
-  .nav-menu > .itens {
+  .nav-menu > .itens > .item-link {
+    display: block;
+    line-height: 100px;
+    height: 100%;
+    text-decoration: none;
     transition: background-color 0.5s ease;
     color: #555;
     padding-left: 15px;
-    padding-right: 15px;
-    line-height: 100px; }
-  .nav-menu > .itens.active {
+    padding-right: 15px; }
+  .nav-menu > .itens.active > .item-link {
     color: #000;
     border-bottom: 3px solid #dbbe20; }
-  .nav-menu > .itens:hover {
+  .nav-menu > .itens > .item-link:hover {
     background-color: #dbbe20;
     color: #fff;
     border-bottom: 3px solid #555; }

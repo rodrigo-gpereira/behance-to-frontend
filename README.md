@@ -2,7 +2,7 @@
 Desenvolvimento de projetos front-end inspirados em web interfaces publicadas no behance
 
 # Site Pizzaria
-https://digoartmusic.github.io/behance-to-frontend/dist/
+https://rodrigo-gpereira.github.io/behance-to-frontend/dist/
 
 OBRIGADO
 ---
